@@ -1,7 +1,7 @@
 Basic Front-end Boilerplate
 ===========================
 
-Basic front-end boilerplate, based on [LESS][-1], with `compiler` and `sprite generator`.
+Basic front-end boilerplate, based on [LESS][lesscss org], with `compiler` and `sprite generator`.
 Later here will much more features.
 
 Requirements
@@ -24,16 +24,15 @@ Recommended to use [Image Magick][5] (tested only x86 versions), but you must sp
 Usage
 -----
 
-Type `npm install` in project folder to download all dependencies.
-`src` folder - is working folder.
+ - Type `npm install` in project folder to download all dependencies.
+ - `src` folder - is a working folder, standalone repo of mine [LESS template][less], presented as git submodule.
+ Type `git clone --recursive <projectName>` to clone with submodule
+ - Type `grunt` to compile sprites and less files.
+ Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`
+ - Type `grunt watch` to watch them automatically.
 
-Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`
-
-Type `grunt` to compile sprites and less files.
-
-Type `grunt watch` to watch them automatically.
-
-[-1]: http://lesscss.org/
+[less]: https://github.com/Yaneraz/less
+['lesscss org]: http://lesscss.org/
 [0]: http://nodejs.org/download/
 [1]: http://gruntjs.com/getting-started
 [2]: http://phantomjs.org/
