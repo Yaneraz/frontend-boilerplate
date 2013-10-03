@@ -1,9 +1,6 @@
 Basic Front-end Boilerplate
 ===========================
 
-Description
------------
-
 Basic front-end boilerplate, based on [LESS][-1], with `compiler` and `sprite generator`.
 Later here will much more features.
 
