@@ -1,12 +1,14 @@
 Basic Front-end Boilerplate
 ===========================
 
-##### Description
+Description
+-----------
 
 Basic front-end boilerplate, based on [LESS][-1], with `compiler` and `sprite generator`.
 Later here will much more features.
 
-##### Requirements
+Requirements
+------------
 
 You need to have [npm][0] installed now, as well as a [grunt][1], and **one of** sprite engine:
  - [phantomjs][2]
@@ -22,7 +24,8 @@ Recommended to use [Image Magick][5] (tested only x86 versions), but you must sp
     }
 
 
-##### Usage
+Usage
+-----
 
 Type `npm install` in project folder to download all dependencies.
 `src` folder - is working folder.
