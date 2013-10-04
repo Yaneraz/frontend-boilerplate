@@ -1,7 +1,7 @@
 Basic Front-end Boilerplate
 ===========================
 
-Basic front-end boilerplate, based on [LESS][lesscss org], with `compiler` and `sprite generator`.
+Basic front-end boilerplate, based on [LESS][l], with `compiler` and `sprite generator`.
 Later here will much more features.
 
 Requirements
@@ -35,7 +35,7 @@ Usage
  - Type `grunt watch` to watch them automatically.
 
 [less]: https://github.com/Yaneraz/less
-['lesscss org]: http://lesscss.org/
+[l]: http://lesscss.org/
 [0]: http://nodejs.org/download/
 [1]: http://gruntjs.com/getting-started
 [2]: http://phantomjs.org/
