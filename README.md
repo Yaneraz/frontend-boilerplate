@@ -12,7 +12,7 @@ You need to have [npm][0] installed now, as well as a [grunt][1], and **one of**
  - [node-canvas][3]
  - gm ([Graphics Magick][4] / [Image Magick][5])
 
-Recommended to use [Image Magick][5] (tested only x86 versions), but you must specify it in engineOpts
+Recommended to use gm [Graphics Magick][4] and [Image Magick][5] (need to install both, tested only x86 versions), but you must specify it in engineOpts
 
     {
       'engineOpts': {
@@ -27,7 +27,7 @@ Usage
  - Type `npm install` in project folder to download all dependencies.
 
  - `src` folder - is a working folder, standalone repo of mine [LESS template][less], presented as git submodule.
- Type `git clone --recursive <projectName>` to clone with submodule.
+ Type `git clone --recursive https://github.com/Yaneraz/frontend-boilerplate.git <projectName>` to clone with submodule.
 
  - Type `grunt` to compile sprites and less files.
  Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`.
