@@ -29,7 +29,7 @@ Usage
 
 - Type `npm install` in project folder to download all dependencies.
 
-- [optional] type `grunt clean` to get rid of .git filed and READMEs.
+- [optional] type `grunt clean` to get rid of .git files and READMEs, including submodules.
 
 - Type `grunt` to compile sprites and less files.
 Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`.
