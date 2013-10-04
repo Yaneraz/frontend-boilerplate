@@ -27,12 +27,12 @@ Usage
 - Type `git clone --recursive https://github.com/Yaneraz/frontend-boilerplate.git <projectName>` to clone with submodule.
 `src` folder - is a working folder, standalone repo of mine [LESS template][less], presented as git submodule.
 
- - Type `npm install` in project folder to download all dependencies.
+- Type `npm install` in project folder to download all dependencies.
 
- - Type `grunt` to compile sprites and less files.
- Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`.
+- Type `grunt` to compile sprites and less files.
+Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`.
 
- - Type `grunt watch` to watch them automatically.
+- Type `grunt watch` to watch them automatically.
 
 [less]: https://github.com/Yaneraz/less
 [l]: http://lesscss.org/
