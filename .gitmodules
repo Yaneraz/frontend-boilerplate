@@ -1,6 +1,3 @@
 [submodule "src"]
 	path = src
 	url = https://github.com/Yaneraz/less.git
-[submodule "less"]
-	path = less
-	url = https://github.com/Yaneraz/less.git
