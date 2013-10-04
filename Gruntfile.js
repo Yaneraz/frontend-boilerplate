@@ -16,6 +16,7 @@ module.exports = function(grunt) {
                 destImg: 'src/img/icons.png',
                 destCSS: 'src/less/_sprites.less',
                 'cssFormat': 'css',
+                'algorithm': 'binary-tree',
                 'engineOpts': {
                     'imagemagick': true
                 },
