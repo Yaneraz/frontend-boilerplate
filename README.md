@@ -25,10 +25,13 @@ Usage
 -----
 
  - Type `npm install` in project folder to download all dependencies.
+
  - `src` folder - is a working folder, standalone repo of mine [LESS template][less], presented as git submodule.
- Type `git clone --recursive <projectName>` to clone with submodule
+ Type `git clone --recursive <projectName>` to clone with submodule.
+
  - Type `grunt` to compile sprites and less files.
- Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`
+ Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`.
+
  - Type `grunt watch` to watch them automatically.
 
 [less]: https://github.com/Yaneraz/less
