@@ -78,7 +78,7 @@ module.exports = function(grunt) {
                 '**/.gitignore',
                 '**/.gitmodules',
                 '**/README.md',
-                '!node_modules/**/*'
+                '!node_modules/**'
             ]
         }
     });
