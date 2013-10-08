@@ -7,7 +7,7 @@ Later here will much more features.
 Requirements
 ------------
 
-You need to have [npm][0] installed now, as well as a [grunt][1], and **one of** sprite engine:
+You need to have [npm][0] installed now, [grunt][1] and **one of** sprite engine:
  - [phantomjs][2]
  - [node-canvas][3]
  - gm ([Graphics Magick][4] / [Image Magick][5])
