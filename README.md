@@ -35,7 +35,7 @@ Usage
 Sprites images are located on `/src/img/icons/` folder, less files in `/src/less/`.
 Type `grunt watch` to watch them automatically.
 
-**Build option.** Type `grunt build` to compress css, optimise images in `build` folder. Files, named with "_" character
+**Build option.** Type `grunt build` to compress css, optimise images in `build` folder. Source files, and files named with "_" character
  in the beginning won't be copied.
 
 [less]: https://github.com/Yaneraz/less
