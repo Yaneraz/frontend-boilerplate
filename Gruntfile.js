@@ -85,6 +85,7 @@ module.exports = function(grunt) {
             git: [
                 '**/.git',
                 '**/.gitignore',
+                '!.gitignore',
                 '**/.gitmodules',
                 '**/README.md',
                 '!node_modules/**'
