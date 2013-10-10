@@ -39,6 +39,15 @@ module.exports = function(grunt) {
                 files: {
                     'src/css/style.css': 'src/less/style.less'
                 }
+            },
+            production: {
+                options: {
+                    paths: ['src/less/**/*.less'],
+                    yuicompress: true
+                },
+                files: {
+                    'build/css/style.css': 'src/less/style.less'
+                }
             }
         },
         watch: {
@@ -80,6 +89,36 @@ module.exports = function(grunt) {
                 '**/README.md',
                 '!node_modules/**'
             ]
+        },
+        concat: {
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: 'src/*.js',
+                dest: 'build//js/app.js'
+            }
+        },
+        imagemin: {
+            dynamic: {
+                options: {
+                    optimizationLevel: 3
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src/img',
+                    src: ['**.{png,jpg,gif}','!icons/*', '!**/_*.{png,jpg,gif}'],
+                    dest: 'build/img'
+                }]
+            }
+        },
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'src/',
+                src: ['*.html', '!_*.html','css/PIE.htc','js/*.js', '!js/_*.js'],
+                dest: 'build/'
+            }
         }
     });
 
@@ -88,6 +127,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', ['sprite','less:development']);
+    grunt.registerTask('build', ['less:production','imagemin','copy']);
 };
