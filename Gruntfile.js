@@ -17,6 +17,7 @@ module.exports = function(grunt) {
                 destCSS: 'src/less/_sprites.less',
                 'cssFormat': 'css',
                 'algorithm': 'binary-tree',
+                'padding': 2,
                 'engineOpts': {
                     'imagemagick': true
                 },
@@ -53,7 +54,7 @@ module.exports = function(grunt) {
         watch: {
             img: {
                 files: 'src/img/icons/*.png',
-                tasks: ['sprite']
+                tasks: ['sprite', 'less:development']
             },
             lesscss: {
                 files: 'src/less/**/*.less',
@@ -122,6 +123,10 @@ module.exports = function(grunt) {
             }
         }
     });
+
+//    grunt.event.on('watch', function(action, filepath) {
+//        grunt.task.run(['sprite', 'less:development']);
+//    });
 
     // Load task definitions and grunt plugins
     grunt.loadNpmTasks('grunt-spritesmith');
