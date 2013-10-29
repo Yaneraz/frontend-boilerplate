@@ -77,7 +77,7 @@ module.exports = function(grunt) {
         watch: {
             img: {
                 files: 'src/img/icons/*.png',
-                tasks: ['sprite', 'less:development', 'image_resize']
+                tasks: ['sprite', 'less:development'] // 'image_resize'
             },
             lesscss: {
                 files: 'src/less/**/*.less',
