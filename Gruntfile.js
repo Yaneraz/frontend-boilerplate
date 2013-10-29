@@ -14,12 +14,25 @@ module.exports = function(grunt) {
             all: {
                 src: 'src/img/icons/*.png',
                 destImg: 'src/img/icons.png',
+                //destImg: 'src/img/icons-2x.png',
+                //'imgPath': '../img/icons.png',
                 destCSS: 'src/less/_sprites.less',
                 'cssFormat': 'css',
                 'algorithm': 'binary-tree',
-                'padding': 2,
+                'padding': 4,
                 'engineOpts': {
                     'imagemagick': true
+                },
+                'cssVarMap': function (sprite) {
+                    // `sprite` has `name`, `image` (full path), `x`, `y`
+                    //   `width`, `height`, `total_width`, `total_height`
+                    // EXAMPLE: Prefix all sprite names with 'sprite-'
+
+                    // retina sprites
+                    //sprite.height = Math.ceil(sprite.height/2);
+                    //sprite.width = Math.ceil(sprite.width/2);
+                    //sprite.x = Math.ceil(sprite.x/2);
+                    //sprite.y = Math.ceil(sprite.y/2);
                 },
                 'cssOpts': {
                     // Some templates allow for skipping of function declarations
@@ -29,6 +42,16 @@ module.exports = function(grunt) {
                     'cssClass': function (item) {
                         return '.ico_' + item.name;
                     }
+                }
+            }
+        },
+        image_resize: {
+            resize: {
+                options: {
+                    width: '50%'
+                },
+                files: {
+                    'src/img/icons.png': 'src/img/icons-2x.png'
                 }
             }
         },
@@ -54,7 +77,7 @@ module.exports = function(grunt) {
         watch: {
             img: {
                 files: 'src/img/icons/*.png',
-                tasks: ['sprite', 'less:development']
+                tasks: ['sprite', 'less:development', 'image_resize']
             },
             lesscss: {
                 files: 'src/less/**/*.less',
@@ -136,7 +159,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-image-resize');
 
-    grunt.registerTask('default', ['sprite','less:development']);
+    grunt.registerTask('default', ['sprite','less:development']); // 'image_resize'
     grunt.registerTask('build', ['less:production','imagemin','copy']);
 };
