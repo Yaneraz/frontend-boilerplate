@@ -92,7 +92,7 @@ module.exports = function(grunt) {
                         secs = date.getSeconds();
 
                     var month = ['Jan', 'Feb', 'Mar', 'Ap', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()];
-                    var dayOfWeek = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][date.getDay()];
+                    var dayOfWeek = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][date.getDay()-1];
 
                     if (hours < 10) {hours = '0' + hours;}
                     if (mins < 10) {mins = '0' + mins;}
