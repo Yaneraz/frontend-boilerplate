@@ -147,19 +147,8 @@ module.exports = function(grunt) {
         }
     });
 
-//    grunt.event.on('watch', function(action, filepath) {
-//        grunt.task.run(['sprite', 'less:development']);
-//    });
-
     // Load task definitions and grunt plugins
-    grunt.loadNpmTasks('grunt-spritesmith');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-image-resize');
+    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('default', ['sprite','less:development']); // 'image_resize'
     grunt.registerTask('build', ['less:production','imagemin','copy']);
