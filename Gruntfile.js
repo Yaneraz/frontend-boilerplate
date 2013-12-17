@@ -58,7 +58,11 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ['src/less/**/*.less']
+                    paths: ['src/less/**/*.less'],
+                    yuicompress: true,
+                    sourceMap: true
+                    //sourceMapFilename: 'assets/css/main.min.css.map',
+                    //sourceMapRootpath: '/app/themes/roots/'
                 },
                 files: {
                     'src/css/style.css': 'src/less/style.less'
