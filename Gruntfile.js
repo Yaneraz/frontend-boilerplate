@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                     var hms = hours + ':' + mins + ':' + secs;
                     var dateMonthYear =  [date.getDate(),month,date.getFullYear()].join('/');
 
-                    grunt.log.writeln('The watch finished in ' + time + 'ms at ' + hms + ' ' + dayOfWeek + ' ' + dateMonthYear);
+                    grunt.log.writeln('The watch finished in ' + time + 's at ' + hms + ' ' + dayOfWeek + ' ' + dateMonthYear);
                 }
             }
         },
